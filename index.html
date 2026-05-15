@@ -45,7 +45,6 @@
             letter-spacing: 2px; margin: 0; font-size: 1.8rem;
         }
 
-        /* Proof Video Area */
         .proof-area {
             width: 100%; height: 250px;
             background: #000; border-radius: 15px;
@@ -53,7 +52,6 @@
             overflow: hidden; box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
 
-        /* Buttons Style */
         .btn {
             display: flex; align-items: center; justify-content: center;
             width: 100%; padding: 16px; margin-bottom: 15px;
@@ -64,7 +62,6 @@
             gap: 10px;
         }
 
-        /* WhatsApp Button */
         .btn-whatsapp {
             background: var(--wa-green);
             color: white;
@@ -79,12 +76,12 @@
 
         .btn:hover { transform: translateY(-3px); opacity: 0.9; box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); }
 
-        /* Timer Overlay */
         #timerOverlay {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.95); z-index: 1000;
             flex-direction: column; align-items: center; justify-content: center;
         }
+
         .timer-circle {
             width: 80px; height: 80px; border: 4px solid var(--primary-color);
             border-radius: 50%; display: flex; align-items: center;
@@ -101,7 +98,6 @@
 
         .glow { color: var(--primary-color); text-shadow: 0 0 10px var(--primary-color); }
         footer { margin-top: 30px; color: #555; font-size: 0.8rem; }
-        
         .wa-icon { width: 22px; height: 22px; fill: white; }
     </style>
 </head>
@@ -113,10 +109,8 @@
         <div style="font-size: 0.8rem; color: #00ff7f; margin-top: 5px;">SERVER STATUS: ONLINE</div>
     </header>
 
-    <!-- AD SPACE 1 -->
     <div class="ad-box">ADVERTISEMENT SPACE</div>
 
-    <!-- PROOF VIDEO AREA -->
     <div class="proof-area">
         <video width="100%" height="100%" controls autoplay muted loop style="object-fit: cover;">
             <source src="VID-20260320-WA0000.mp4" type="video/mp4">
@@ -125,19 +119,15 @@
     </div>
 
     <div class="btn-container">
-        <!-- WHATSAPP PAID BUTTON -->
         <a href="https://wa.me/94783938367?text=I%20want%20to%20buy%20the%20Paid%20Panel" class="btn btn-whatsapp">
             <svg class="wa-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.6 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
             BUY PAID PANEL
         </a>
-
-        <!-- FREE BUTTON -->
         <button onclick="handleFreeDownload()" class="btn btn-free">
             DOWNLOAD FREE PANEL
         </button>
     </div>
 
-    <!-- AD SPACE 2 -->
     <div class="ad-box">ADVERTISEMENT SPACE</div>
 
     <footer>
@@ -145,7 +135,6 @@
     </footer>
 </div>
 
-<!-- Timer Overlay -->
 <div id="timerOverlay">
     <div class="timer-circle" id="timerCount">10</div>
     <p style="margin-top: 20px; letter-spacing: 2px; font-size: 0.8rem;">SECURE LINK GENERATING...</p>
@@ -153,7 +142,6 @@
 </div>
 
 <script>
-    // ඔබේ Short Link එක මෙතනට දාන්න
     const finalLink = "https://shrinkme.click/Free-Fire-VIP";
 
     function handleFreeDownload() {
@@ -171,12 +159,8 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timer);
-                    if(finalLink === "https://shrinkme.click/Free-Fire-VIP") {
-                        alert("Please update the download link in code!");
-                        overlay.style.display = 'none';
-                    } else {
-                        window.location.href = finalLink;
-                    }
+                    // මෙතනදී කෙලින්ම ලින්ක් එකට යොමු කරයි
+                    window.location.href = finalLink;
                 }
             }, 1000);
         }
